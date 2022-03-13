@@ -1,0 +1,127 @@
+// Imports, Use, Forward, ...
+@use './util/minreset.scss';
+@use './util' as *;
+
+// Règle d'écriture d'une classe :
+// 1) Box
+// 2) Border
+// 3) Background
+// 4) Text
+// 5) Other
+
+// Règle BEM
+// Block = card
+// Element = image, title, describe, devise, value, date, avatar, autor
+// Modifier = here isn't modifier
+
+body {
+  font-family: $font-bentham;
+  min-height: 100vh;
+  //background-color: $bg-dark-grey;
+  background: linear-gradient(180deg, rgba(66,65,70,1) 20%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 50%, rgba(66,65,70,1) 80%);
+  color: $white;
+  @include breakpoint(medium){
+    padding-left: rem(32);
+    padding-right: rem(32);
+  }
+  @include breakpoint(large){
+    padding-left: rem(96);
+    padding-right: rem(96);
+  }
+  @include breakpoint(xlarge){
+    padding-left: rem(128);
+    padding-right: rem(128);
+  }
+  @include breakpoint(xxlarge){
+    padding-left: rem(160);
+    padding-right: rem(160);
+  }
+}
+.header{
+  padding-top: rem(32);
+  padding-left: rem(32);
+  padding-right: rem(32);
+  min-height: 100vh;
+}
+.main{
+  min-height: 100vh;
+  padding-top: rem(32);
+  padding-bottom: rem(32);
+  @include breakpoint(small){
+    padding: rem(64);
+  }
+}
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: rem(48);
+  text-align: justify;
+  font-size: rem(20);
+  line-height: rem(22);
+}
+.footer{
+  padding-bottom: rem(16);
+}
+
+.avatar{
+  width: rem(240);
+  height: auto;
+}
+.title{
+  margin-top: rem(32);
+  margin-bottom: rem(32);
+  font-size: rem(48);
+  font-weight: normal;
+  line-height: rem(50);
+}
+.artist, .artist:active, .artist:visited {
+  font-family: $font-artist;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page{
+  width: 100%;
+  height: auto;
+}
+
+.liner{
+  justify-self: center;
+  width: 50%;
+  height: rem(2);
+  margin-top: rem(16);
+  margin-bottom: rem(16);
+  background-color: $bg-light-grey;
+}
+
+.subtitle{
+  font-size: rem(24);
+  font-family: $font-artist;
+  font-weight: bold;
+  margin-bottom: rem(32);
+}
+.container-reseau{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: rem(32);
+}
+
+.lien_reseau, .lien_reseau:active, .lien_reseau:visited{
+  text-decoration: none;
+  color: inherit;
+}
+.reseau{
+  width: auto;
+  height: rem(24);
+}

@@ -1,0 +1,356 @@
+// Imports, Use, Forward, ...
+@use './util/minreset.scss';
+@use './util' as *;
+
+// Règle d'écriture d'une classe :
+// 1) Box
+// 2) Border
+// 3) Background
+// 4) Text
+// 5) Other
+
+// Règle BEM
+// Block = card
+// Element = image, title, describe, devise, value, date, avatar, autor
+// Modifier = here isn't modifier
+
+body{
+    font-family: $font-ibm;
+    @include breakpoint(xlarge){
+        background-image: url('./src/assets/bg-main-desktop.png') ;
+        background-repeat: no-repeat;
+        background-position-x: rem(-300);
+        background-position-y: rem(-264);
+    }
+}
+.header{
+    height: rem(622);
+    background-image: url('./src/assets/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-position-y: rem(-240);
+    color: $black;
+    padding: rem(24);
+
+    @include breakpoint(medium){
+        height: rem(770);
+        background-image: url('./src/assets/bg-pattern-1.svg'), url('./src/assets/bg-main-tablet.png') ;
+        background-size: auto rem(400), auto;
+        background-repeat: no-repeat, no-repeat;
+        background-position-x: 108%, rem(-400);
+        background-position-y: rem(-32), rem(-300);
+    }
+    @include breakpoint(xlarge){
+        height: auto;
+        background-image: url('./src/assets/bg-pattern-1.svg') ;
+        background-size: auto rem(448);
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: rem(-40);
+    }
+    .logo{
+        width: rem(146.09);
+        height: rem(32);
+        margin-top: rem(16);
+        margin-bottom: rem(64);
+        @include breakpoint(medium){
+            margin-left: rem(16);
+            margin-top: rem(38);
+            margin-bottom: rem(95);
+        }
+        @include breakpoint(xlarge){
+            margin-left: rem(142);
+            margin-top: rem(38);
+            margin-bottom: rem(127);
+        }
+    }
+    .title_01{
+        width: 100%;
+        max-width: rem(328);
+        margin-bottom: rem(20);
+        font-weight: 700;
+        font-style: normal;
+        font-size: rem(40);
+        line-height: rem(48);
+        letter-spacing: rem(-0.45);
+        @include breakpoint(medium){
+            max-width: rem(520);
+            margin-left: rem(16);
+            margin-bottom: rem(28);
+            font-size: rem(64);
+            line-height: rem(64);
+            letter-spacing: rem(-0.73);
+        }
+        @include breakpoint(xlarge){
+            max-width: rem(1012);
+            margin-left: rem(142);
+            margin-bottom: rem(40);
+            font-size: rem(88);
+            line-height: rem(88);
+            letter-spacing: rem(-1);
+        }
+    }
+    .resume{
+        width: 100%;
+        max-width: rem(328);
+        font-weight: 400;
+        font-style: normal;
+        font-size: rem(16);
+        line-height: rem(26);
+        @include breakpoint(medium){
+            max-width: rem(514);
+            font-size: rem(18);
+            line-height: rem(28);
+        }
+        @include breakpoint(xlarge){
+            max-width: rem(825);
+            font-size: rem(20);
+            line-height: rem(34);
+            margin-left: rem(142);
+            margin-bottom: rem(321);
+        }
+    }
+}
+.main{
+    width: 100%;
+    max-height: rem(926);
+    border-radius: rem(15);
+    background-image: url('./src/assets/bg-pattern-2.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: rem(280) auto;
+    background-color: $black;
+    color: $white;
+    @include breakpoint(medium){
+        max-width: rem(696);
+        max-height: rem(600);
+        margin: 0 auto;
+        background-position-x: 55%;
+        background-position-y: -12%;
+    }
+    @include breakpoint(xlarge){
+        max-width: rem(1110);
+        max-height: rem(600);
+        margin: 0 auto;
+        background-position-x: rem(344);
+        background-position-y: rem(-40);
+    }
+    .phone{
+        max-width: rem(209);
+        max-height: rem(430);
+        margin: 0 auto;
+        position: relative;
+        top: rem(-98);
+        @include breakpoint(medium){
+            max-width: rem(270);
+            max-height: rem(556);
+            margin-left: rem(64);
+            top: rem(-138);
+        }@include breakpoint(xlarge){
+            max-width: rem(312);
+            max-height: rem(642);
+            margin-left: rem(102);
+            top: rem(-213);
+        }
+    }
+    .plan{
+        width: 100%;
+        height: rem(546);
+        box-sizing: border-box;
+        border-radius: rem(15);
+        background-color: $smooth-red;
+        position: relative;
+        top: rem(-50);
+        @include breakpoint(medium){
+            width: rem(400);
+            height: rem(546);
+            top: rem(-402);
+            margin-left: rem(240);
+        }
+        @include breakpoint(xlarge){
+            width: rem(446);
+            height: rem(625);
+            top: rem(-560);
+            margin-left: rem(569);
+        }
+    }
+    .title_01{
+        max-width: rem(302);
+        margin: rem(12) auto;
+        padding-top: rem(48);
+        font-weight: 700;
+        font-style: normal;
+        font-size: rem(32);
+        line-height: rem(40);
+        @include breakpoint(medium){
+            margin-top: rem(0);
+        }
+        @include breakpoint(xlarge){
+            max-width: rem(334);
+            margin-top: rem(0);
+            margin-bottom: rem(22);
+            padding-top: rem(58);
+            font-size: rem(40);
+            line-height: rem(52);
+        }
+    }
+    .details{
+        max-width: rem(302);
+        margin: 0 auto;
+        margin-bottom: rem(36);
+        font-weight: 400;
+        font-style: normal;
+        font-size: rem(18);
+        line-height: rem(28);
+        @include breakpoint(xlarge){
+            max-width: rem(334);
+            margin-bottom: rem(40);
+            font-size: rem(20);
+            line-height: rem(34);
+        }
+    }
+    .price_area{
+        max-width: rem(296);
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: rem(32);
+        @include breakpoint(xlarge){
+            max-width: rem(334);
+            margin-bottom: rem(46);
+        }
+    }
+    .price{
+        margin-right: rem(16);
+        font-weight: 700;
+        font-style: normal;
+        font-size: rem(65);
+        line-height: rem(52);
+    }
+    .option{
+        font-weight: 400;
+        font-style: normal;
+        font-size: rem(20);
+        line-height: rem(32);
+        letter-spacing: rem(-0.2);
+    }
+    .btn_area{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn{
+        width: rem(334);
+        height: rem(61);
+        margin: 0 auto;
+        border: none;
+        border-radius: rem(15);
+        text-align: center;
+        font-weight: 700;
+        font-style: normal;
+        font-size: rem(18);
+        line-height: rem(32);
+        letter-spacing: rem(-0.18);
+        img{
+            margin-right: rem(9);
+        }
+    }
+    .apple, .apple:visited{
+        margin-bottom: rem(16);
+        background-color: $black;
+        color: $white;
+    }
+    .apple:hover, .apple:focus, .apple:focus-within, .apple:focus-visible, .apple:target, .apple:active{
+        background-color: $smooth-green;
+    }
+    .android, .android:visited{
+        background-color: $white;
+    }
+    .android:hover, .android:focus, .android:target, .android:focus-within, .android:focus-visible, .apple:active{
+        background-color: $smooth-orange;
+    }
+}
+.footer{
+    max-width: rem(310);
+    height: rem(397);
+    margin: 0 auto;
+    margin-top: rem(64);
+    @include breakpoint(medium){
+        max-width: rem(696);
+        margin-top: rem(184);
+    }
+    @include breakpoint(xlarge){
+        max-width: rem(1110);
+        height: rem(80);
+        margin-top: rem(202);
+        margin-bottom: rem(90);
+        display: flex;
+    }
+    .logo{
+        width: rem(146);
+        height: rem(32);
+        margin-bottom: rem(32);
+        @include breakpoint(xlarge){
+            margin-right: rem(138);
+            margin-bottom: rem(0);
+        }
+    }
+    .footer_content{
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(medium){
+            flex-direction: row;
+            align-items: top;
+        }
+        @include breakpoint(xlarge){
+            width: 100%;
+        }
+    }
+    p{
+        font-weight: 400;
+        font-style: normal;
+        font-size: rem(16);
+        line-height: rem(26);
+        @include breakpoint(medium){
+            width: rem(366);
+        }
+    }
+    .email{
+        font-weight: 700;
+    }
+    .social{
+        margin-top: rem(64);
+        @include breakpoint(medium){
+            height: 100%;
+            margin-top: rem(0);
+            margin-left: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .facebook:visited, .insta:visited, .twitter:visited  {
+            color: $black;
+        }
+        .facebook:active ,.facebook:focus, .facebook:focus-within, .facebook:focus-visible, .facebook:hover, .facebook:target,
+        .insta:active ,.insta:focus, .insta:focus-within, .insta:focus-visible, .insta:hover, .insta:target,
+        .twitter:active ,.twitter:focus, .twitter:focus-within, .twitter:focus-visible, .twitter:hover, .twitter:target{
+            color: $smooth-red;
+        }
+    }
+    .insta{
+        margin-left: rem(20);
+        margin-right: rem(20);
+    }
+}
+.fem{
+    text-align: center;
+    font-size: rem(11);
+    .attribution, a:visited{
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .attribution:active, .attribution:target, .attribution:focus, .attribution:focus-within, .attribution:focus-visible, .attribution:hover{
+        color: $smooth-red;
+    }
+}
